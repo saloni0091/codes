@@ -12,7 +12,7 @@ file containing a table .When we will run the program it will ask for the length
  
  How to run :
  
- Simply we can run it in any c compliant IDE, in order to open it we can use any eeditor like notepad
+ As it is the program of linux ,so we need a linux operating system to execute it like ubuntu etc, in order to open it we can use any eeditor like notepad
  
  
  Contributions welcome
