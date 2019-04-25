@@ -1,14 +1,16 @@
 #include<stdio.h>
 
-
+// Required functions and their arguments
 void rr(int [],int,int,int [],int [],int []);
 void print(int [],int [],int [],int [],int []);
 void avgwt(int [],int);
 void avgtat(int [],int [],int [],int);
 
 int bt[20],p[20],tat[20],wt[20],n,time=0,counter[20];
-float avg_wt,avg_tat;
+float avg_wt,avg_tat;				// avg_wt-> Avg waiting tym,avg_tat->Avg Turn around time
 
+
+// Main Driver code 
 int main()
 {
     int i;
@@ -42,35 +44,6 @@ int main()
 }
 
 
-/*void avgwt(int bt[],int n)
-{
-  int wt[20],i,j,total=0;
-  wt[0]=0;    
-    for(i=1;i<n;i++)
-    {
-	wt[i]=0;
-	for(j=0;j<i;j++)
-	    wt[i]+=bt[j];
-	total+=wt[i];
-    }
-    avg_wt=total/n;     
-    avgtat(bt,wt,p,n) ;
-}*/
-
-/*void avgtat(int bt[],int wt[],int p[],int n)
-{
- int i,tat[20],total=0;
- printf("\nProcess\t    Burst Time    \tWaiting Time\tTurnaround Time");
-    for(i=0;i<n;i++)
-    {
-	tat[i]=bt[i]+wt[i];     //calculate turnaround time
-	total+=tat[i];
-	printf("\nP[%d]\t\t  %d\t\t    %d\t\t\t%d",p[i],bt[i],wt[i],tat[i]);
-    }
-    avg_tat=total/n;     //average turnaround time
-    printf("\n\nAverage Waiting Time=%f",avg_wt);
-    printf("\nAverage Turnaround Time=%f\n",avg_tat);
-}*/
 
 void rr(int bt[],int n,int time,int counter[],int tat[],int wt[])
 {
@@ -112,7 +85,7 @@ void print(int p[],int bt[],int counter[],int tat[],int wt[])
 {
   int i;
 
-  printf("\nProcess Number\tBurst Time\tWaiting time\tTurnaround time\n");
+  printf("\nProcess Number\tBurst Time\tWaiting time\tTurnaround time\n");     // Print the result
   for(i=0;i<n;i++)
     printf("%d\t\t%d\t\t%d\t\t%d\n",p[i],bt[i],wt[i],counter[i]);
 }
